@@ -1,0 +1,24 @@
+{
+  "name": "Coulomb",
+  "version": "2.0.1",
+  "description": "Compteur de charge en COULOMBS pour ESP8266. Integrateur PUR : dC = I x dt, rien d'autre. Horodatage micros() avec gestion du debordement (~70 min), filtrage exponentiel du courant, suivi min/max optionnel, addCharge() pour injecter une charge deja integree. Aucune physique : ni rendement faradique, ni Peukert, ni etat de charge — ces politiques appartiennent au projet utilisateur. Persistance deleguee a Fo170/Persistance (setTotalCoulombs/getTotalCoulombs). Pour un cumul de longue duree, preferer Fo170/CoulombsAh (accumulateur int64 a deux etages) : en float32 l'ULP depasse l'increment des ~100 Ah. Dependance unique : Arduino.h.",
+  "keywords": "coulomb, charge, batterie, battery, coulometre, coulombmeter, esp8266, ina226, persistance",
+  "authors": [
+    {
+      "name": "Olivier FOURNET",
+      "email": "olivier.fournet@free.fr",
+      "url": "https://github.com/Fo170",
+      "maintainer": true
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Fo170/Coulomb.git"
+  },
+  "license": "GPL-3.0-only",
+  "frameworks": "arduino",
+  "platforms": "espressif8266",
+  "headers": [
+    "Coulomb.h"
+  ]
+}
